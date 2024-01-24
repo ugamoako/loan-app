@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/loan-app",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
