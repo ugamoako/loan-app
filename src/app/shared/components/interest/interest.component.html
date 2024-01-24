@@ -1,0 +1,20 @@
+<h2 class="text-center">Loan Interests</h2>
+<div mat-dialog-content>
+    @for(item of data.interests; track item.id){
+        <div class="interest-container">
+            <div>{{getMonthName( item.month)}}</div>
+            <div>{{item.amount | currency: '₵'}}</div>
+            <div>
+                <a (click)="payInterest(item.id)"><mat-icon class="icon-button-small" color="primary">check</mat-icon></a>
+                <a (click)="delInterest(item.id)"><mat-icon class="icon-button-small" color="warn">close</mat-icon></a>
+            </div>
+        </div>
+    }
+    @if(data.interests.length === 0){
+        <h4 class="text-center">No data available</h4>
+    }
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="addInterest(data.id)"><mat-icon>add</mat-icon> Add Interest</button>
+    <button mat-button [mat-dialog-close] cdkFocusInitial><mat-icon>close</mat-icon> Close</button>
+</div>

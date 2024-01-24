@@ -1,0 +1,17 @@
+<div class="detail-container">
+    <div class="detail-client" (click)="details(id)">
+        <div class="heading4">{{name}}</div>
+        <div>Loan: {{loan | currency: '₵'}}</div>
+    </div>
+    <div class="detail-interest">
+        <div matTooltip="total loans plus accrued interests">Total: <span>{{(loan + interest) | currency: '₵'}}</span></div>
+        <div matTooltip="Unpaid interest(s)">Interest: <span>{{interest | currency: '₵'}}</span></div>
+    </div>
+    <div class="detail-buttons">
+        <button mat-button matTooltip="Add new loan amount" (click)="addLoan(id)"><mat-icon>add</mat-icon>Add</button>
+        <button mat-button matTooltip="Add paid loan amount" (click)="payLoan(id)"><mat-icon>paid</mat-icon>Pay</button>
+        <button mat-button matTooltip="see unpaid interests" (click)="payInterest(id)"><mat-icon>payments</mat-icon>Interest</button>
+        <a matTooltip="call this client" [href]="'tel:'+mobile" class="icon-button-small"><mat-icon>call</mat-icon></a>
+        <a matTooltip="Delete this record" class="icon-button-small" (click)="deleteClient(id)"><mat-icon color="warn">delete</mat-icon></a>
+    </div>
+</div>

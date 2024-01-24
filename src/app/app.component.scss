@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+.loan-info{
+    display: flex;
+    /* margin: auto auto; */
+    padding: 16px;
+    background-color: aliceblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}

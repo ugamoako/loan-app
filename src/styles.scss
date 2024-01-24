@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+* {
+    //font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+.w-100{
+    width: 100%;
+}
+.text-center{
+    text-align: center;
+}
+
+
+    $large-size-button: 80px;
+    $large-size-icon: 48px;
+
+    .icon-button-large {
+        width: $large-size-button;
+        height: $large-size-button;
+        line-height: $large-size-button;
+
+        .mat-icon {
+            font-size: $large-size-icon;
+            width: $large-size-icon;
+            height: $large-size-icon;
+            line-height: $large-size-icon;
+        }
+
+        .mat-button-ripple {
+            font-size: inherit;
+            width: inherit;
+            height: inherit;
+            line-height: inherit;
+        }
+    }
+
+    $small-size-button: 24px;
+    $small-size-icon: 18px;
+
+    .icon-button-small {
+        width: $small-size-button;
+        height: $small-size-button;
+        line-height: $small-size-button;
+
+        .mat-icon {
+            font-size: $small-size-icon;
+            width: $small-size-icon;
+            height: $small-size-icon;
+            line-height: $small-size-icon;
+        }
+
+        .mat-button-ripple {
+            font-size: inherit;
+            width: inherit;
+            height: inherit;
+            line-height: inherit;
+        }
+    }

@@ -1,0 +1,25 @@
+<h2 class="text-center">Client's Information</h2>
+<div mat-dialog-content>
+  <mat-form-field class="w-100">
+    <mat-label>Full name</mat-label>
+    <input matInput placeholder="Enter full name" [formControl]="name" required>
+    @if (name.invalid) {
+      <mat-error>{{getNameErrorMessage()}}</mat-error>
+    }
+  </mat-form-field>
+  <mat-form-field class="w-100">
+    <mat-label>Mobile</mat-label>
+    <input matInput placeholder="Enter mobile" [formControl]="mobile" required>
+    @if (name.invalid) {
+      <mat-error>{{getMobileErrorMessage()}}</mat-error>
+    }
+  </mat-form-field>
+  <mat-form-field class="w-100">
+    <mat-label>Bank name</mat-label>
+    <input matInput placeholder="Bank Name" [formControl]="bank">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="submit()">Submit</button>
+  <button mat-button [mat-dialog-close] cdkFocusInitial>Close</button>
+</div>
